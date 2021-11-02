@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>😻카페포레스트 MBTI!!!😻</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="animcat.png" />
+    <link rel="apple-touch-startup-image" href="animcat.png">
+
+
+    <meta id="meta_og_description" property="og:description" content="갑작스레 카페를 경영하게 된 당신! 당신은 어떤 스타일의 동물인가요?" />
+    <meta property="og:url" content="https://cafe-forest-mbti.netlify.app/">
+
+    <meta id="meta_name" name="msapplication-starturl" content="https://cafe-forest-mbti.netlify.app/" />
+    <link id="meta_image_src" rel="image_src" href="animcat.png" />
+
+    <meta id="meta_og_title"  property="og:title" content="당신은..." /><!-- 트위터 설명칸에 들어가는 내용 -->
+
+    <meta id="meta_og_type"  property="og:type" content="website" />
+    <meta id="meta_og_image" property="og:image" content="animcat.png" />
+    <meta id="meta_og_site_name" property="og:site_name" content="meta_og_site_name" />
+    <meta id="meta_og_url" property="og:url" content="https://cafe-forest-mbti.netlify.app/" />
+
+    <meta id="meta_twitter_card" name="twitter:card" content="summary" />
+    <meta id="meta_twitter_url" name="twitter:url" content="https://cafe-forest-mbti.netlify.app/" />
+    <meta id="meta_twitter_title" name="twitter:title" content="meta_twitter_title" />
+    <meta id="meta_twitter_description" name="twitter:description" content="갑작스레 카페를 경영하게 된 당신! 당신은 어떤 스타일의 동물인가요?" />
+    <meta id="meta_twitter_image" name="twitter:image" content="animcat.png" />
+    <meta id="cma_meta_twitter_image" name="twitter:image" content="animcat.png" />
+    <meta name="twitter:image" content="animcat.png" />
+    <meta name="twitter:site" content="동물MBTI" />
+    <meta name="twitter:creator" content="스튜디오17" />
+    <meta property="og:image:alt" content="동물MBTI">
+    <meta property="og:site_name" content="동물MBTI">
+
+    <meta id="meta_nate_title"  name="nate:title" content="meta_nate_title" />
+    <meta id="meta_nate_description"  name="nate:description" content="갑작스레 카페를 경영하게 된 당신! 당신은 어떤 스타일의 동물인가요?" />
+    <meta id="meta_nate_site_name"  name="nate:site_name" content="meta_nate_site_name" />
+    <meta id="meta_nate_url" name="nate:url" content="https://cafe-forest-mbti.netlify.app/" />
+    <meta id="meta_nate_image" name="nate:image" content="animcat.png" />
+
+    <meta property="fb:app_id" content="APP_ID" />
+    
+
+    
+</head>
+<body class="container">
+    <!-- 0.기본 버튼 -->
+
+    <!-- 공버튼 -->
+    <button id ="none" type="button" class="btn btn-outline-light"></button>
+
+    <!-- 공유 링크 -->
+    <a id="notion" href="https://www.notion.so/c226700119814414b0db8f2b7781392a" target="_blank">
+        <img src="notion.png" height="60" width="60" alt="카페 포레스트 노션">
+    </a>
+    
+    <a id="insta" href="https://www.instagram.com/studioasev/" target="_blank">
+        <img src="insta.png" height="60" width="60" alt="카페 포레스트 인스타그램">
+    </a>
+
+    <a id="twitter" href="https://twitter.com/studio17_dev" target="_blank">
+        <img src="twitter.png" height="60" width="60" alt="카페 포레스트 트위터">
+    </a>
+
+    <a id="youtube" href="https://youtu.be/zxxobiZ-F_U" target="_blank">
+        <img src="youtube.png" height="60" width="60" alt="카페 포레스트 유튜브">
+    </a>
+
+    <!-- 다시하기 버튼 -->
+    <button id="restart" type="button" class="btn btn-outline-success" onclick="window.location.reload()">*****restart****</button>
+
+    <!-- 1.시작화면 -->
+    <article class="start text-center">
+        <img id="index1" src="nintendo_start.png" alt="base">
+        <button id="index2" type="button" class="btn btn-outline-success" onclick="start()">  **************start***************   </button>
+    </article>
+
+    <!-- 2.문제화면 -->
+    <article class="question text-center">
+        <!-- 배경 이미지 -->
+        <img id="index1" src="nintendo_ing.png" alt="base">
+
+        <!-- 설명, 고르는 버튼들 -->
+        <h3 id="title" class="text-center dot">문제</h3>
+        <input id="type" type="hidden"value="EI">
+        <button id="A" type="button" class="godic">선택지1</button>
+        <button id="B" type="button" class="godic">선택지2</button>
+
+        <!-- 뒤로가기 버튼 -->
+        <button id="pre" type="button" class="btn btn-outline-dark">뒤</button>
+    </article>
+
+    <!-- 3.결과 페이지 -->
+    <article class="result text-center">
+        <div class="loader"></div>
+        <!-- 배경 이미지 -->
+        <img id="index1" src="nintendo_final.png" alt="base">
+
+        <!-- 동물 이미지 -->
+        <div id="img_cover">
+            <img id="img" src="base.png" alt="animal">
+        </div>
+        
+        <h2 id="animal" class="text-center dot">동물이름</h2>
+        
+
+        <!-- 설명 -->
+        <div id = "ex_bottom">
+            <h5 class="text-center mt-5">-타입-</h5>
+            <p id="explain1" class="text-center godic">설명1</p>
+            <h5 class="text-center mt-1">-특징-</h5>
+            <p id="explain2" class="text-center godic">설명2</p>
+        </div>
+
+        <div id= "text-left">
+            <h5 id="text-drink" class="text-center mt-1">나의 메뉴는?</h5>
+            <img id="img-drink" src="mole.png" alt="drink">
+            <p id="explain3" class="text-center godic">라떼</p>
+        </div>
+        
+        <div id = "text-right">
+            <h5 id="text-ch" class="text-center mt-1">나의 단짝은?</h5>
+            <img id = "img-couple" src="mole.png" alt="couple-animal">
+            <p id = "couple" class="text-center godic">꼬양이</p>
+        </div>
+        
+
+        
+        <div id= "ex_out">
+            <!-- 공유 버튼들 -->
+            <div class="share addthis_inline_share_toolbox"></div>
+        </div>
+
+        <!-- 텀블벅 배너 -->
+        <div>
+            <a id="tumblebug" href="https://tumblbug.com/cafeforest" target="_blank">
+                <img src="tumblebug_baner.png" width="900" alt="카페 포레스트 유튜브">
+            </a>
+        </div>
+
+    </article>
+    
+    <!-- 우리게임 홍보 -->
+    <div id="down">
+        <img src="logo.png" height="40" width="100"alt="logo">
+        <p></p>
+        <p>ⓒ 2021 studio17. All Rights Reserved.</p>
+    </div>
+    
+
+    <!-- 타입별 값을 저장할 숨겨진 변수를 생성 -->
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+
+    <!-- 자바스크립트 불러오기 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+    <script>
+        //문제 정보
+        var num = 1;
+        var q = {
+            1: {"title": "<p>1.</p>숲속에 카페를 오픈하게 된다면 나는…", "type" : "EI", "A" : "▶마음 맞는 친구들과 함께 동업한다.", "B" : "▶나 혼자서 일처리 하는 것이 편하다."},
+            2: {"title": "<p>2.</p>가게를 오픈한지 일주일이 지나고 마침내 휴일이 되었습니다! 휴일에 당신은…", "type" : "EI", "A" : "▶바빠서 못만난 친구들을 만나 카페운영 후기 얘기해야지!", "B" : "▶일주일간 너무 힘들었어… 집에서 나가고싶지 않아."},
+            3: {"title": "<p>3.</p>옆집 가게에서 당신과 친해지고 싶어하는 눈치입니다. 이때 당신은…", "type" : "EI", "A" : "▶친하게 지내면 좋지! 먼저 다가가서 대화를 시도한다.", "B" : "▶아직 어떤사람인지 잘 모르는데… 천천히 관찰부터 한다."},
+            4: {"title": "<p>4.</p>메뉴 다양화를 시도하는 당신! 메뉴 개발은 어떻게…?", "type" : "SN", "A" : "▶주변 가게의 잘나가는 메뉴를 조사하여 참고한다.", "B" : "▶뭔가 맛있을것 같은 나만의 메뉴를 상상해 만들어본다."},
+            5: {"title": "<p>5.</p>어라! 밀가루 포대 모퉁이가 조금 뜯어져있네…", "type" : "SN", "A" : "▶어디에 긁혔나보네…", "B" : "▶혹시 쥐가 갉아먹었나?"},
+            6: {"title": "<p>6.</p>손님이 없는 한가한 오후! 당신은 생각에 잠기는데…", "type" : "SN", "A" : "▶나는 아무 생각이 없다.", "B" : "▶왜 팬케이크는 동그란 모양인걸까..."},
+            7: {"title": "<p>7.</p>드디어 조금씩 유명세를 타고있는 당신의 가게! 내 가게는…", "type" : "TF", "A" : "▶분위기보다는 맛이지! 명실상부한 브런치 맛집으로 소문났으면", "B" : "▶맛보단 분위기지! 따스하고 아늑한 분위기의 카페로 기억되었으면~"},
+            8: {"title": "<p>8.</p>정신없는 마감시간! 아차… 친구와의 약속 시간에 늦었다. 이때 당신은…", "type" : "TF", "A" : "▶미안미안 마감때 갑자기 손님이 몰아쳐서 늦었네… 내가 맛있는거 살게!!", "B" : "▶아 진짜 미안해… 나 기다리느라 너무 추웠겠다… 정말 미안해…ㅠㅠ"},
+            9: {"title": "<p>9.</p>같이 동업하는 친구가 잠시 쉬어가고 싶다고 합니다. 이때 당신은…", "type" : "TF", "A" : "▶그래! 적절한 휴식은 효율을 높여주니까… 근데 뭐하면서 쉴거야?", "B" : "▶그동안 힘들었구나… 고생많았어. 푹 쉬고 다시 같이 잘해보자!"},
+            10: {"title": "<p>10.</p>가게는 점점 손님이 많아지고 있습니다! 그런데 왜인지 순이익은 별로 변화가 없네요. 이때 당신은…", "type" : "JP", "A" : "▶가계부를 꼼꼼히 작성하여 빈구멍을 찾는다.", "B" : "▶가격이 너무 저렴한가? 가격을 올린다."},
+            11: {"title": "<p>11.</p>아침에 일어났더니 몸이 너무 무겁습니다. 이때 당신은…", "type" : "JP", "A" : "▶그래도 일은 해야지…", "B" : "▶오늘 하루정도는 괜찮겠지. 쉰다!"},
+            12: {"title": "<p>12.</p>카페 마감 후 직원 중 한명이 회식을 하자고 보챕니다. 이때 당신은…", "type" : "JP", "A" : "▶아… 이건 예정에 없던 일인데…", "B" : "▶그래, 까짓거. 가자! 먹자! 놀자!"}
+        }
+
+        //결과값 정보
+        var result = {
+            "INFP": {"animal" : "노랑토끼", "explain1" : "<p>당신은 이상주의 토끼 타입입니다.</p>", "explain2" : "<p> “ 나만의 분위기를 가진 공간으로 꾸며가는 카페 사장 ”</p><p>“ 일 없을땐 상상의 나래를 펼치는 아르바이트생”</p> ", "explain3" : "<p> 당근 쥬스</p>", "img" : "yrabbit.png", 
+        "couple" : "늑대", "img-couple" : "awolf.png", "img-drink" : "danggun.png"},
+            "INFJ": {"animal" : "노랑토끼", "explain1" : "<p>당신은 이상주의 토끼 타입입니다.<p>", "explain2" : "<p> “ 나만의 분위기를 가진 공간으로 꾸며가는 카페 사장 ”</p><p>“ 일 없을땐 상상의 나래를 펼치는 아르바이트생”</p> ", "explain3" : "<p> 당근 쥬스</p>", "img" : "yrabbit.png",
+        "couple" : "늑대", "img-couple" : "awolf.png", "img-drink" : "danggun.png"},
+            "INTP": {"animal" : "고양이", "explain1" : "-<p> 타입: 당신은 마이웨이 고양이 타입입니다.<p>", "explain2" : "<p> “ 가끔 뜬금없는 메뉴를 출시하는 카페 사장 ”</p><p>“ 매뉴얼 읽기 싫어하는 아르바이트생  ”</p> ", "explain3" : "<p> 치즈 샌드위치</p>", "img" : "animcat.png",
+        "couple" : "두루미", "img-couple" : "rumi.png", "img-drink" : "sandwitch.png"},
+            "INTJ": {"animal" : "회색토끼", "explain1" : "<p>당신은 계획적인 토끼 타입입니다.</p>", "explain2" : "<p> “ 재정적으로 탄탄한 카페를 만들어가는 카페 사장 ”</p><p>“ 알아서 척척 잘하는 아르바이트생 ”</p> ", "explain3" : "<p> 녹차 라떼</p>", "img" : "grabbit.png",
+        "couple" : "족제비", "img-couple" : "ferret.png", "img-drink" : "latte_yellow_dish.png"},
+            "ISTJ": {"animal" : "너구리", "explain1" : "<p>당신은 학구적인 너구리 타입입니다.</p>", "explain2" : "<p> “ 최소비용 최대효율의 운영을 연구하는 카페 사장”</p><p>“ 효율적인 동선을 연구하는 아르바이트생 ”</p> ", "explain3" : "<p> 옥수수 라떼</p>", "img" : "animalracoon.png",
+        "couple" : "다람쥐", "img-couple" : "squirrel.png", "img-drink" : "latte_yellow_dish.png"},
+            "ISTP": {"animal" : "두더지", "explain1" : "<p>당신은 귀차니즘 두더지 타입입니다.</p>", "explain2" : "<p> “ 가게에 자주 안나오는 카페 사장 ”</p><p>“ 퇴근만을 간절히 기다리는 아르바이트생 ”</p> ", "explain3" : "<p> 포도 쥬스</p>", "img" : "mole.png",
+        "couple" : "너구리", "img-couple" : "animalracoon.png", "img-drink" : "ade_yellow_dish.png"},
+            "ISFJ": {"animal" : "부엉이", "explain1" : "<p>당신은 부지런한 부엉이 타입입니다.</p>", "explain2" : "<p> “ 새벽 6시에 오픈하는 카페 사장 ”</p><p>“ 출근 30분전에 미리 나와있는 아르바이트생 ”</p> ", "explain3" : "<p> 카페 라떼</p>", "img" : "owl.png",
+        "couple" : "고슴도치", "img-couple" : "animhedgehog.png", "img-drink" : "latte_brown_dish.png"},
+            "ISFP": {"animal" : "부엉이", "explain1" : "<p>당신은 부지런한 부엉이 타입입니다.</p>", "explain2" : "<p> “ 새벽 6시에 오픈하는 카페 사장 ”</p><p>“ 출근 30분전에 미리 나와있는 아르바이트생 ”</p> ", "explain3" : "<p> 카페 라떼</p>", "img" : "owl.png",
+        "couple" : "고슴도치", "img-couple" : "animhedgehog.png", "img-drink" : "latte_brown_dish.png"},
+            "ENTJ": {"animal" : "늑대", "explain1" : "<p>당신은 자신만만 늑대 타입입니다.</p>", "explain2" : "<p> “ 메뉴에 대한 자부심이 강한 카페 사장 ”</p><p>“ 말싸움에서 절대 안지는 아르바이트생 ”</p> ", "explain3" : "<p> 버터 핫케이크</p>", "img" : "awolf.png",
+        "couple" : "노랑토끼", "img-couple" : "yrabbit.png", "img-drink" : "pancake.png"},
+            "ENTP": {"animal" : "늑대", "explain1" : "<p>당신은 자신만만 늑대 타입입니다.</p>", "explain2" : "<p> “ 메뉴에 대한 자부심이 강한 카페 사장 ”</p><p>“ 말싸움에서 절대 안지는 아르바이트생 ”</p> ", "explain3" : "<p> 버터 핫케이크</p>", "img" : "awolf.png",
+        "couple" : "노랑토끼", "img-couple" : "yrabbit.png", "img-drink" : "pancake.png"},
+            "ENFP": {"animal" : "족제비", "explain1" : "<p>당신은 자유분방 족제비 타입입니다.</p>", "explain2" : "<p> “ 갑자기 문 닫고 여행갈 것 같은 카페 사장 ”</p><p>“ 언제 그만둘지 모르는 아르바이트생 ”</p> ", "explain3" : "<p> 체리 에이드</p>", "img" : "ferret.png",
+        "couple" : "회색토끼", "img-couple" : "grabbit.png", "img-drink" : "ade_red_dish.png"},
+            "ENFJ": {"animal" : "고슴도치", "explain1" : "<p>당신은 친절한 고슴도치 타입입니다.</p>", "explain2" : "<p> “ 따뜻하고 친절해서 인기가 많은 카페 사장 ”</p><p>“ 손님들에게 이쁨받는 아르바이트생 ”</p> ", "explain3" : "<p> 바나나 핫케이크</p>", "img" : "animhedgehog.png",
+        "couple" : "고양이", "img-couple" : "animcat.png", "img-drink" : "pancake.png"},
+            "ESFJ": {"animal" : "고슴도치", "explain1" : "<p>당신은 친절한 고슴도치 타입입니다.</p>", "explain2" : "<p> “ 따뜻하고 친절해서 인기가 많은 카페 사장 ”</p><p>“ 손님들에게 이쁨받는 아르바이트생 ”</p> ", "explain3" : "<p> 바나나 핫케이크</p>", "img" : "animhedgehog.png",
+        "couple" : "고양이", "img-couple" : "animcat.png", "img-drink" : "pancake.png"},
+            "ESFP": {"animal" : "다람쥐", "explain1" : "<p>당신은 인기만점 다람쥐 타입입니다.</p>", "explain2" : "<p> “ 툭하면 옆가게로 놀러가는 카페 사장 ”</p><p>“ 맨날 친구들이 놀러오는 아르바이트생 ”</p> ", "explain3" : "<p> 땅콩 샌드위치</p>", "img" : "squirrel.png",
+        "couple" : "두더지", "img-couple" : "mole.png", "img-drink" : "sandwitch.png"},
+            "ENTJ": {"animal" : "두루미", "explain1" : "<p>당신은 현실적인 두루미 타입입니다.</p>", "explain2" : "<p> “ 솔직담백 팩트로 때려버리는 카페 사장 ”</p><p>“ 일 못하는 동기가 답답한 아르바이트생 ”</p> ", "explain3" : "<p> 레몬 에이드</p>", "img" : "rumi.png",
+        "couple" : "부엉이", "img-couple" : "owl.png", "img-drink" : "ade_yellow_dish.png"},
+            "ESTJ": {"animal" : "두루미", "explain1" : "<p>당신은 현실적인 두루미 타입입니다.</p>", "explain2" : "<p> “ 솔직담백 팩트로 때려버리는 카페 사장 ”</p><p>“ 일 못하는 동기가 답답한 아르바이트생 ”</p> ", "explain3" : "<p> 레몬 에이드</p>", "img" : "rumi.png",
+        "couple" : "부엉이", "img-couple" : "owl.png", "img-drink" : "ade_yellow_dish.png"}
+        }
+
+        //시작했을 때
+        function start() {
+            //제이쿼리 문법
+            $(".start").hide(); 
+            $(".question").show();
+            next();//바로 첫번째 문제가 나오도록 함
+        }
+
+        //A버튼 클릭시 실행
+        $("#A").click(function(){
+            var type = $("#type").val();//EI 값 변수화
+            var preValue = $("#" + type).val();//id EI의 값 변수화
+            $("#" + type).val(parseInt(preValue) + 1);//id EI의 값+1 후 다시 저장
+            next();
+            document.getElementById("none")[0].click();
+            document.getElementById("none").click();
+            $("#none").trigger("click");
+            $("#A").load(location.href + "#A");
+        });
+
+        //B버튼 클릭시 실행
+        $("#B").click(function(){
+            next();
+            document.getElementById("none")[0].click();
+            document.getElementById("none").click();
+            $("#none").last().trigger("click");
+            $("#B").load(location.href + "#B");
+        });
+
+        //뒤로가기 버튼 클릭시 실행
+        $("#pre").click(function(){
+            previous();
+            document.getElementById("none")[0].click();
+            $("#none").last().trigger("click");
+        });
+
+        //메타태그 변경 함수
+        function MetaTagsChange(url,stitle,scontent,simg){
+            $("#meta_image_src").attr("href", simg); // 트위터 카드를 사용하는 URL이다.
+            // 트위터 관련 메타태그
+            $("#meta_twitter_url").attr("content", url); // 트위터 카드를 사용하는 URL이다.
+            $("#meta_twitter_title").attr("content", stitle+" [https://cafe-forest-mbti.netlify.app/]"); // 트위터 카드에 나타날 제목
+            $("#meta_twitter_description").attr("content", scontent); // 트위터 카드에 나타날 요약 설명
+            $("#meta_twitter_image").attr("content", simg); // 트위터 카드에 보여줄 이미지
+        
+            // 페이스북 관련 메타태그
+            $("#meta_og_title").attr("content", stitle); //    제목표시
+            $("#meta_og_image").attr("content", simg); //    이미지경로 w:90px , h:60px(이미지를 여러 개 지정할 수 있음)
+            $("#meta_og_site_name").attr("content", stitle+" [https://cafe-forest-mbti.netlify.app/]"); //    사이트 이름
+            $("#meta_og_url").attr("content", url); //    표시하고싶은URL
+            $("#meta_og_description").attr("content", scontent); //    본문내용
+
+            // 네이트온 관련 메타태그
+            $("#meta_nate_title").attr("content", stitle); //    제목표시
+            $("#meta_nate_description").attr("content", scontent); //    본문내용
+            $("#meta_nate_site_name").attr("content", stitle+" [https://cafe-forest-mbti.netlify.app/]"); //    사이트 이름
+            $("#meta_nate_url").attr("content",url); //    표시하고싶은URL
+            $("#meta_nate_image").attr("content", simg); //    이미지경로
+        
+        }
+
+        //다음 문제로 넘어가는 함수
+        function next() {
+            if(num == 13) { //모든 문제를 다 풀었을 때
+                $(".question").hide();
+                $(".result").show();
+
+
+                //결과값 연산
+                var mbti = "";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+
+                //alert(mbti);//테스트용 코드-무슨 mbti 뜨는지 확인
+
+                //화면에 해당하는 동물 보여주기
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain1").html(result[mbti]["explain1"]);
+                $("#explain2").html(result[mbti]["explain2"]);
+
+                // 궁합 리스트
+                $("#img-drink").attr("src", result[mbti]["img-drink"]);
+                $("#img-couple").attr("src", result[mbti]["img-couple"]);
+
+                $("#explain3").html(result[mbti]["explain3"]);
+                $("#couple").html(result[mbti]["couple"]);
+
+                MetaTagsChange("https://cafe-forest-mbti.netlify.app/",result[mbti]["explain1"],result[mbti]["explain2"],result[mbti]["img"]);
+
+                $("#meta_og_title").attr("content", "stitle"); //    제목표시
+
+                // var meta = document.createElement('meta');
+                // meta.setAttribute('apple-touch-startup-image', result[mbti]["img"]);
+                // meta.setAttribute('og:image',result[mbti]["img"]);
+                // meta.setAttribute('twitter:image',result[mbti]["img"]);
+                // document.getElementsByTagName('head')[0].appendChild(meta);
+
+
+            } else {
+                //해당 값의 html 코드(글씨)부분/val 부분을 바꿈
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            } 
+        }
+
+        //이전 문제로 돌아가는 함수
+        function previous() {
+            if(num > 1){
+                //해당 값의 html 코드(글씨)부분/val 부분을 바꿈
+                $("#title").html(q[num-1]["title"]);
+                $("#type").val(q[num-1]["type"]);
+                $("#A").html(q[num-1]["A"]);
+                $("#B").html(q[num-1]["B"]);
+                num--;
+            } 
+        }
+
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools, 공유 버튼들 출처 -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-604cb3ec0110a7a1"></script>
+</body>
+</html>
